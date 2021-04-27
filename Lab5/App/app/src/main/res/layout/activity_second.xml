@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="10dp"
+    tools:context=".Second">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="100dp"
+        android:alpha="1"
+        android:scrollbarDefaultDelayBeforeFade="2000"
+        android:scrollbarFadeDuration="1000"
+        android:scrollbarSize="10dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="1 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="2 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="3 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="4 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="5 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="6 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="7 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="8 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="9 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="10 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="11 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="12 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="13 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="14 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="15 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="16 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="17 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="18 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="19 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="20 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="21 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="22 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_200"
+                android:text="23 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <Switch
+                android:id="@+id/switch24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700"
+                android:text="24 item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/main2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="Main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

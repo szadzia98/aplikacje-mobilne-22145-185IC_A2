@@ -4,15 +4,16 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
     <ListView
+        android:id="@+id/lvTodos"
         android:layout_width="fill_parent"
-        android:id="@+id/lvTodosAsync"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="632dp"
+        android:layout_weight="1"></ListView>
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etNewTaskAsync"
+        android:id="@+id/etNewTask"
         android:hint="name task"
         android:visibility="gone">
         <requestFocus></requestFocus>
@@ -20,69 +21,60 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/llNewTaskButtonsAsync"
+        android:id="@+id/llNewTaskButtons"
         android:visibility="gone">
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/btnSaveAsync"
+            android:id="@+id/btnSave"
             android:text="Save"></Button>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/btnCancelAsync"
+            android:id="@+id/btnCancel"
             android:text="Cancel"></Button>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/llControlButtonsAsync">
+        android:id="@+id/llControlButtons">
         <Button
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/btnAddNewAsync"
+            android:id="@+id/btnAddNew"
             android:text="Add"
             android:layout_width="fill_parent"></Button>
         <Button
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/btnClearCompletedAsync"
+            android:id="@+id/btnClearCompleted"
             android:text="Clear"
             android:layout_width="fill_parent"></Button>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnMain"
+        android:text="Main"
+        android:layout_width="fill_parent"></Button>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnCInit100"
+        android:text="Init100"
+        android:layout_width="fill_parent"></Button>
         <Button
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/btnMainAsync"
-            android:text="Main"
-            android:layout_width="fill_parent"></Button>
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btnCInit100Async"
-            android:text="Init100"
-            android:layout_width="fill_parent"></Button>
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btnClear100Async"
+            android:id="@+id/btnClear100"
             android:text="Clear100"
             android:layout_width="fill_parent"></Button>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </LinearLayout>
 
-        <ProgressBar
-            android:id="@+id/progBar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"></ProgressBar>
-    </LinearLayout>
 </LinearLayout>

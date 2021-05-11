@@ -7,8 +7,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.SyncStateContract;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,13 +19,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.util.TimingLogger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Async extends AppCompatActivity {
-    private Button btnAddNew, main, clear100, init100;
+public class Sync extends AppCompatActivity {
+    private Button btnAddNew, sync, clear100, init100;
     private Button btnClearCompleted;
     private Button btnSave;
     private Button btnCancel;
@@ -33,7 +32,6 @@ public class Async extends AppCompatActivity {
     private ListView lvTodos;
     private LinearLayout llControlButtons;
     private LinearLayout llNewTaskButtons;
-    private ProgressBar progBar;
 
     private TodoDbAdapter todoDbAdapter;
     private Cursor todoCursor;
@@ -43,12 +41,11 @@ public class Async extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_async);
+        setContentView(R.layout.activity_sync2);
         initUiElements();
         initListView();
         initButtonsOnClickListeners();
     }
-
 
     private void clear100Tasks(){
         for(int i = 0; i <100; i++){
@@ -57,27 +54,31 @@ public class Async extends AppCompatActivity {
         }
         clearCompletedTasks();
     }
+
     private void init100Todos(){
         long start=System.currentTimeMillis();
-        new LoaderTasks().execute();
+        for(int i = 1; i <=100; i++){
+            String taskDescription = "Task" + i;
+            todoDbAdapter.insertTodo(taskDescription);
+        }
+        updateListViewData();
         long stop = System.currentTimeMillis();
-        System.out.println("Czas wykonania async:"+(stop-start));
-    }
+        System.out.println("Czas wykonania sync:"+(stop-start));
 
+    }
     private void initUiElements() {
-        btnAddNew = (Button) findViewById(R.id.btnAddNewAsync);
-        btnClearCompleted = (Button) findViewById(R.id.btnClearCompletedAsync);
-        btnSave = (Button) findViewById(R.id.btnSaveAsync);
-        btnCancel = (Button) findViewById(R.id.btnCancelAsync);
-        etNewTask = (EditText) findViewById(R.id.etNewTaskAsync);
-        lvTodos = (ListView) findViewById(R.id.lvTodosAsync);
-        llControlButtons = (LinearLayout) findViewById(R.id.llControlButtonsAsync);
-        llNewTaskButtons = (LinearLayout) findViewById(R.id.llNewTaskButtonsAsync);
-        main = (Button) findViewById(R.id.btnMainAsync);
-        clear100 = (Button) findViewById(R.id.btnClear100Async);
-        init100 = (Button) findViewById(R.id.btnCInit100Async);
-        progBar = (ProgressBar) findViewById(R.id.progBar);
-     }
+        btnAddNew = (Button) findViewById(R.id.btnAddNew);
+        btnClearCompleted = (Button) findViewById(R.id.btnClearCompleted);
+        btnSave = (Button) findViewById(R.id.btnSave);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+        etNewTask = (EditText) findViewById(R.id.etNewTask);
+        lvTodos = (ListView) findViewById(R.id.lvTodos);
+        llControlButtons = (LinearLayout) findViewById(R.id.llControlButtons);
+        llNewTaskButtons = (LinearLayout) findViewById(R.id.llNewTaskButtons);
+        sync = (Button)findViewById(R.id.btnMain);
+        clear100 = (Button) findViewById(R.id.btnClear100);
+        init100 = (Button)findViewById(R.id.btnCInit100);
+    }
 
     private void initListView() {
         fillListViewData();
@@ -153,27 +154,27 @@ public class Async extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.btnAddNewAsync:
+                    case R.id.btnAddNew:
                         addNewTask();
                         break;
-                    case R.id.btnSaveAsync:
+                    case R.id.btnSave:
                         saveNewTask();
                         break;
-                    case R.id.btnCancelAsync:
+                    case R.id.btnCancel:
                         cancelNewTask();
                         break;
-                    case R.id.btnClearCompletedAsync:
+                    case R.id.btnClearCompleted:
                         clearCompletedTasks();
                         break;
-                    case R.id.btnMainAsync:
-                        Intent intent = new Intent(Async.this, MainActivity.class);
+                    case R.id.btnMain:
+                        Intent intent = new Intent(Sync.this, MainActivity.class);
                         startActivity(intent);
                         onStop();
                         break;
-                    case R.id.btnCInit100Async:
+                    case R.id.btnCInit100:
                         init100Todos();
                         break;
-                    case R.id.btnClear100Async:
+                    case R.id.btnClear100:
                         clear100Tasks();
                         break;
                     default:
@@ -186,7 +187,7 @@ public class Async extends AppCompatActivity {
         btnSave.setOnClickListener(onClickListener);
         btnCancel.setOnClickListener(onClickListener);
         clear100.setOnClickListener(onClickListener);
-        main.setOnClickListener(onClickListener);
+        sync.setOnClickListener(onClickListener);
         init100.setOnClickListener(onClickListener);
     }
 
@@ -244,34 +245,5 @@ public class Async extends AppCompatActivity {
             } while (todoCursor.moveToNext());
         }
         updateListViewData();
-    }
-
-    private class LoaderTasks extends AsyncTask<Void,Integer,Void> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            progBar.setVisibility(View.VISIBLE);
-            progBar.setProgress(0);
-        }
-        @Override
-        protected Void doInBackground(Void... params){
-            for(int i = 1; i <=100; i++){
-                String taskDescription = "Task" + i;
-                todoDbAdapter.insertTodo(taskDescription);
-                publishProgress(i);
-            }
-            return null;
-        }
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-            progBar.setProgress(values[0]);
-        }
-        @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-            progBar.setVisibility(View.INVISIBLE);
-            updateListViewData();
-        }
     }
 }

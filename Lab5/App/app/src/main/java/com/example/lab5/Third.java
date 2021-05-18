@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 public class Third extends AppCompatActivity {
 
     Button main, highlight, opacity;
+    Drawable bacckground1 = highlight.getBackground();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,12 @@ public class Third extends AppCompatActivity {
         highlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(highlight.getBackground() == bacckground1 )
+                {
+                    highlight.setBackground(getResources().getDrawable(R.drawable.highlight2));
+                }else{
+                    highlight.setBackground(bacckground1);
+                }
             }
         });
 

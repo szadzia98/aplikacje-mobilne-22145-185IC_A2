@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,7 +27,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9503fc-d3cf-4b96-81b3-d2f494c3f447" name="Default Changelist" comment="" />
+    <list default="true" id="1c9503fc-d3cf-4b96-81b3-d2f494c3f447" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab7/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab7/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lab6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lab6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +50,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -62,5 +79,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621348471109">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="414" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348471109" />
+    <state x="740" y="315" key="FileChooserDialogImpl" timestamp="1621348802986">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="740" y="315" key="FileChooserDialogImpl/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348802986" />
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom" timestamp="1621348495736">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348495736" />
+    <state width="1877" height="239" key="GridCell.Tab.0.center" timestamp="1621348495736">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.0.center/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348495736" />
+    <state width="1877" height="239" key="GridCell.Tab.0.left" timestamp="1621348495736">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.0.left/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348495736" />
+    <state width="1877" height="239" key="GridCell.Tab.0.right" timestamp="1621348495736">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.0.right/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348495736" />
+    <state x="461" y="205" key="SettingsEditor" timestamp="1621348823899">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="461" y="205" key="SettingsEditor/-1360.40.1360.728/0.40.1920.1040@0.40.1920.1040" timestamp="1621348823899" />
   </component>
 </project>

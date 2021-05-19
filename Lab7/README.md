@@ -3,7 +3,7 @@ Kod z lab 6 został tu rozszerzony
 Funkcja synchroniczna
 ![](Screen/funcSync.jpg)
 Czas wykonania
-![](Screen/CzasWykonaniaSync.jpg)
+![](Screen/CzasWykonaniasync.jpg)
 Funkcja asynchroniczna
 ![](Screen/func1Async.jpg)
 ![](Screen/Func2Async.jpg)
